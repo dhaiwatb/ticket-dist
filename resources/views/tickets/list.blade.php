@@ -47,13 +47,13 @@
                                 <td>{{$value->ticket_title}}</td>
                                 <td>{{$value->ticket_number}}</td>
                                 <td class="flex flex-grid">
-                                    <a href="{{route('tickets.edit', ['ticket' => $value->id])}}" class="edit_ticket btn btn-primary mx-2" data-id="{{$value->id}}">Edit Ticket</a>
+                                    <a href="{{route('tickets.edit', ['ticket' => $value->id])}}" class="edit_ticket text-primary mx-2" data-id="{{$value->id}}">Edit Ticket</a>
                                     {{-- <a href="{{ route('tickets.destroy', ['ticket' => $value->id]) }}" class="delete_ticket" data-id="{{$value->id}}">Delete Ticket</a> --}}
                                     
                                     <form action="{{ route('tickets.destroy', $value->id) }}" method="post" class="">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete Ticket</button>
+                                        <button type="submit" class="text-danger">Delete Ticket</button>
                                     </form>
                                     
                                 </td>
